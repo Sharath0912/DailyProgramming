@@ -17,29 +17,29 @@ public class InsertElementToArray
         }
         System.out.println();
         
-        System.out.println("Enter the element and position the element to be inserted");
-        int element = sc.nextInt(); 
-        int position = sc.nextInt(); 
+        System.out.println("Enter the element and pos the ele to be inserted");
+        int ele = sc.nextInt(); 
+        int pos = sc.nextInt(); 
 
-        //To Ensure position is within the array bounds
-        if (position < 0 || position > arr.length) {
-            System.out.println("Invalid position to insert.");
+        //To Ensure pos is within the array bounds
+        if (pos < 0 || pos > arr.length) {
+            System.out.println("Invalid pos to insert.");
             return;
         }
 
         // Create a new array 
         int[] newArr = new int[arr.length + 1];
 
-        // Copy elements up to the position
-        for (int i = 0; i < position; i++) {
+        // Copy elements up to the pos
+        for (int i = 0; i < pos; i++) {
             newArr[i] = arr[i];
         }
 
         // Insert the element
-        newArr[position] = element;
+        newArr[pos] = ele;
 
         // Copy the remaining elements
-        for (int i = position + 1; i < newArr.length; i++) {
+        for (int i = pos + 1; i < newArr.length; i++) {
             newArr[i] = arr[i - 1];
         }
         
