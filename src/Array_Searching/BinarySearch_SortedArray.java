@@ -1,8 +1,8 @@
-package Searching;
+package Array_Searching;
 
 import java.util.Scanner;
 
-public class LinearSearch 
+public class BinarySearch_SortedArray 
 {
 	public static void main(String[] args) 
 	{
@@ -20,7 +20,7 @@ public class LinearSearch
 		System.out.println("Enter the Key Element to Search : ");
 		int key=sc.nextInt();
 		
-		int index=linearSearch(arr,key);
+		int index=binarySearch(arr,key);
 		
 		if(index != -1)
 		{
@@ -28,16 +28,28 @@ public class LinearSearch
 		}
 		else
 			System.out.println("Element Not Found....!");
-		
 	}
 
-	public static int linearSearch(int[] arr, int key) 
+	public static int binarySearch(int[] arr, int key) 
 	{
-		for(int i=0;i<arr.length;i++)
+		int low = 0;
+		int high = arr.length;
+		
+		while(low<=high)
 		{
-			if(arr[i]==key)
+			int mid=(low+high)/2;
+			
+			if(arr[mid]==key)
 			{
-				return i;
+				return mid;
+			}
+			else if(arr[mid]<key)
+			{
+				low=mid+1;
+			}
+			else
+			{
+				high=mid-1;
 			}
 		}
 		return -1;
