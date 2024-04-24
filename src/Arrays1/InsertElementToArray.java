@@ -21,7 +21,7 @@ public class InsertElementToArray
         int ele = sc.nextInt(); 
         int pos = sc.nextInt(); 
 
-        //To Ensure pos is within the array bounds
+        //To Ensure position is within the array bounds
         if (pos < 0 || pos > arr.length) {
             System.out.println("Invalid pos to insert.");
             return;
@@ -30,7 +30,7 @@ public class InsertElementToArray
         // Create a new array 
         int[] newArr = new int[arr.length + 1];
 
-        // Copy elements up to the pos
+        // Copy elements up to the position
         for (int i = 0; i < pos; i++) {
             newArr[i] = arr[i];
         }
