@@ -1,14 +1,17 @@
 package Arrays1;
 
+import java.util.Scanner;
+
 public class InsertArrayIntoAnother 
 {
     public static void main(String[] args) 
     {
+    	Scanner sc = new Scanner(System.in);
         int[] arr1 = {1, 2, 3, 4, 5};
         int[] arr2 = {6, 7, 8, 9, 10};
 
-        // Define the position where arr2 will be inserted into arr1
-        int position = 2;
+        System.out.println("Enter the position from where arr2 should be inserted into arr1"); 
+        int position = sc.nextInt();
 
         // Create a new array to hold the result
         int[] result = new int[arr1.length + arr2.length];
