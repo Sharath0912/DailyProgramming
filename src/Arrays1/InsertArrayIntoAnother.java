@@ -11,29 +11,29 @@ public class InsertArrayIntoAnother
         int[] arr2 = {6, 7, 8, 9, 10};
 
         System.out.println("Enter the position from where arr2 should be inserted into arr1"); 
-        int position = sc.nextInt();
+        int pos = sc.nextInt();
 
         // Create a new array to hold the result
-        int[] result = new int[arr1.length + arr2.length];
+        int[] res = new int[arr1.length + arr2.length];
 
         // Copy elements from arr1 to result before the insertion position
-        for (int i = 0; i < position; i++) {
-            result[i] = arr1[i];
+        for (int i = 0; i < pos; i++) {
+            res[i] = arr1[i];
         }
 
         // Insert elements from arr2 into result at the insertion position
         for (int i = 0; i < arr2.length; i++) {
-            result[position + i] = arr2[i];
+            res[pos + i] = arr2[i];
         }
 
         // Copy remaining elements from arr1 to result after the insertion
-        for (int i = position; i < arr1.length; i++) {
-            result[arr2.length + i] = arr1[i];
+        for (int i = pos; i < arr1.length; i++) {
+            res[arr2.length + i] = arr1[i];
         }
 
         System.out.println("Resulting array after inserting arr2 into arr1:");
-        for (int num : result) {
-            System.out.print(num + " ");
+        for (int n : res) {
+            System.out.print(n + " ");
         }
     }
 }
