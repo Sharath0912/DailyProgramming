@@ -19,6 +19,9 @@ public class MergeTwoArrays
 			arr[a.length+i]=b[i];
 		}
 		
-		
+		System.out.println("After Merging: ");
+		for (int i : arr) {
+			System.out.print(i+" ");
+		}
 	}
 }
